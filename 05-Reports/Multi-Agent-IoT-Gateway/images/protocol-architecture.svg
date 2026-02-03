@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1a1a2e">多智能体物联网通信协议架构</text>
+  
+  <!-- === EDGE DEVICES LAYER === -->
+  <rect x="50" y="60" width="700" height="140" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="8"/>
+  <text x="400" y="85" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">边端设备层 (Edge Devices)</text>
+  
+  <!-- Camera -->
+  <rect x="80" y="100" width="100" height="80" fill="#fff" stroke="#1976d2" stroke-width="1.5" rx="4"/>
+  <text x="130" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">📷 IP摄像头</text>
+  <text x="130" y="140" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">YOLO推理</text>
+  <text x="130" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">15ms延迟</text>
+  <text x="130" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">PTZ控制</text>
+  
+  <!-- Robot Dog -->
+  <rect x="200" y="100" width="100" height="80" fill="#fff" stroke="#1976d2" stroke-width="1.5" rx="4"/>
+  <text x="250" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">🐕 机器狗</text>
+  <text x="250" y="140" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">LiDAR扫描</text>
+  <text x="250" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">手势识别</text>
+  <text x="250" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">运动控制</text>
+  
+  <!-- Sensor -->
+  <rect x="320" y="100" width="100" height="80" fill="#fff" stroke="#1976d2" stroke-width="1.5" rx="4"/>
+  <text x="370" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">🌡️ 传感器</text>
+  <text x="370" y="140" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">温度/湿度</text>
+  <text x="370" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">1s采样</text>
+  <text x="370" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">低功耗</text>
+  
+  <!-- Mobile -->
+  <rect x="440" y="100" width="100" height="80" fill="#fff" stroke="#1976d2" stroke-width="1.5" rx="4"/>
+  <text x="490" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">📱 移动终端</text>
+  <text x="490" y="140" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">GPS定位</text>
+  <text x="490" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">语音交互</text>
+  <text x="490" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">边缘计算</text>
+  
+  <!-- More devices indicator -->
+  <text x="620" y="145" text-anchor="middle" font-family="Arial" font-size="24" fill="#1976d2">⋯</text>
+  <text x="620" y="165" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">+N台设备</text>
+  
+  <!-- === GATEWAY LAYER === -->
+  <rect x="50" y="220" width="700" height="160" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="400" y="245" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#e65100">Edge Gateway (协议转换与路由)</text>
+  
+  <!-- Real-time Data Stream (Left) -->
+  <rect x="80" y="265" width="280" height="95" fill="#ffebee" stroke="#d32f2f" stroke-width="1.5" rx="4"/>
+  <text x="220" y="285" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">实时数据通道 (Real-time)</text>
+  <text x="220" y="305" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">UDP / WebSocket</text>
+  <text x="220" y="320" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">边端 → 中枢 (上行)</text>
+  <text x="220" y="335" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">视频流 / 推理结果 / 传感器</text>
+  <text x="220" y="350" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d32f2f">&lt; 100ms</text>
+  
+  <!-- Control Command Stream (Right) -->
+  <rect x="440" y="265" width="280" height="95" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5" rx="4"/>
+  <text x="580" y="285" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">控制命令通道 (Control)</text>
+  <text x="580" y="305" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">WebSocket / MQTT</text>
+  <text x="580" y="320" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">中枢 → 边端 (下行)</text>
+  <text x="580" y="335" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">配置下发 / 指令调度</text>
+  <text x="580" y="350" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#388e3c">&lt; 1s</text>
+  
+  <!-- === CENTRAL HUB LAYER === -->
+  <rect x="50" y="400" width="700" height="180" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8"/>
+  <text x="400" y="425" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#4a148c">中枢层 (Central Hub)</text>
+  
+  <!-- Message Queue -->
+  <rect x="80" y="445" width="120" height="110" fill="#fff" stroke="#7b1fa2" stroke-width="1.5" rx="4"/>
+  <text x="140" y="465" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#333">☁️ 消息队列</text>
+  <text x="140" y="485" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Topic路由</text>
+  <text x="140" y="500" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">数据缓冲</text>
+  <text x="140" y="515" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">削峰填谷</text>
+  <text x="140" y="535" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">edge.{id}.inference</text>
+  <text x="140" y="548" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">edge.{id}.event</text>
+  
+  <!-- AI Agents -->
+  <rect x="220" y="445" width="140" height="110" fill="#fff" stroke="#7b1fa2" stroke-width="1.5" rx="4"/>
+  <text x="290" y="465" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#333">🤖 AI Agents</text>
+  <text x="290" y="485" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">视觉分析Agent</text>
+  <text x="290" y="500" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">决策Agent</text>
+  <text x="290" y="515" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">协调Agent</text>
+  <text x="290" y="535" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#4a148c">异步处理</text>
+  <text x="290" y="548" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#4a148c">秒级/分钟级</text>
+  
+  <!-- Tools -->
+  <rect x="380" y="445" width="120" height="110" fill="#fff" stroke="#7b1fa2" stroke-width="1.5" rx="4"/>
+  <text x="440" y="465" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#333">🛠️ 工具集</text>
+  <text x="440" y="485" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">edge_device_list</text>
+  <text x="440" y="500" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">edge_inference_config</text>
+  <text x="440" y="515" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">edge_command_send</text>
+  <text x="440" y="530" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">edge_stream_subscribe</text>
+  
+  <!-- Session -->
+  <rect x="520" y="445" width="200" height="110" fill="#fff" stroke="#7b1fa2" stroke-width="1.5" rx="4"/>
+  <text x="620" y="465" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#333">💾 Session上下文</text>
+  <text x="620" y="485" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">activeDevices[]</text>
+  <text x="620" y="500" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">recentAlerts[]</text>
+  <text x="620" y="515" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">deviceTopology</text>
+  <text x="620" y="530" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">realtimeMetrics</text>
+  <text x="620" y="548" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">基于OpenClaw扩展</text>
+  
+  <!-- === ARROWS === -->
+  <!-- Edge to Gateway (Real-time) -->
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#388e3c"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7b1fa2"/>
+    </marker>
+  </defs>
+  
+  <!-- Red arrows: Edge -> Gateway Real-time -->
+  <line x1="130" y1="180" x2="220" y2="265" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="250" y1="180" x2="240" y2="265" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="370" y1="180" x2="260" y2="265" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="490" y1="180" x2="280" y2="265" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrow-red)"/>
+  
+  <!-- Green arrows: Gateway Control -> Edge -->
+  <line x1="560" y1="265" x2="490" y2="180" stroke="#388e3c" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="580" y1="265" x2="370" y2="180" stroke="#388e3c" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="600" y1="265" x2="250" y2="180" stroke="#388e3c" stroke-width="2" marker-end="url(#arrow-green)"/>
+  
+  <!-- Red arrows: Gateway Real-time -> Message Queue -->
+  <line x1="220" y1="360" x2="140" y2="445" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrow-red)"/>
+  
+  <!-- Green arrows: Session -> Gateway Control -->
+  <line x1="620" y1="445" x2="580" y2="360" stroke="#388e3c" stroke-width="2" marker-end="url(#arrow-green)"/>
+  
+  <!-- Purple arrows: Message Queue -> AI Agents -->
+  <line x1="200" y1="500" x2="220" y2="500" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  
+  <!-- Purple arrows: AI Agents -> Tools -->
+  <line x1="360" y1="500" x2="380" y2="500" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  
+  <!-- Purple arrows: Tools -> Session -->
+  <line x1="500" y1="500" x2="520" y2="500" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="560" width="700" height="30" fill="#fff" stroke="#ccc" stroke-width="1" rx="4"/>
+  <text x="70" y="578" font-family="Arial" font-size="10" fill="#666">图例:</text>
+  <line x1="100" y1="574" x2="130" y2="574" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="135" y="578" font-family="Arial" font-size="9" fill="#666">实时数据流 (边端→中枢)</text>
+  
+  <line x1="260" y1="574" x2="290" y2="574" stroke="#388e3c" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="295" y="578" font-family="Arial" font-size="9" fill="#666">控制命令流 (中枢→边端)</text>
+  
+  <line x1="410" y1="574" x2="440" y2="574" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <text x="445" y="578" font-family="Arial" font-size="9" fill="#666">内部数据流</text>
+</svg>
